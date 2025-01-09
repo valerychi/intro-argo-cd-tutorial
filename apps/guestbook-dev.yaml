@@ -14,7 +14,7 @@ spec:
         - values-dev.yaml
   destination:
     namespace: guestbook-dev
-    name: eks
+    name: eks-dev
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
