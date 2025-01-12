@@ -1,0 +1,12 @@
+version: 0.1.23
+versionOverride: ""
+namespace: default
+gomplateDatasources: ""
+heoRoot: qcs
+heoRevision: af14afc5e493cad7dfc1e520295dbf0764052ac7
+heoRevisionOverride: ""
+enableArgoHookDeleteRedis: "false"
+enableArgoHookDeleteRedisForce: "false"
+slackNotifyChannel: qcs_int
+onboarded: "true"
+deploymentWindow: 30
