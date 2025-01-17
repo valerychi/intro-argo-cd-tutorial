@@ -11,6 +11,8 @@ spec:
     path: apps
     repoURL: https://github.com/valerychi/intro-argo-cd-tutorial # Update to your repo URL.
     targetRevision: HEAD
+    directory:
+      recurse: true
   syncPolicy:
     automated:
       prune: true
