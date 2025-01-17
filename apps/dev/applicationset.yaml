@@ -40,7 +40,7 @@ spec:
         app.kubernetes.io/version: "{{if .versionOverride}}{{.versionOverride}}{{else}}{{.version}}{{end}}"
         app.kubernetes.io/heo-revision: "{{if .heoRevisionOverride}}{{.heoRevisionOverride}}{{else}}{{.heoRevision}}{{end}}"
     spec:
-      project: qcs
+      project: default
       source:
         repoURL: https://github.com/qlik-trial/helm-environment-overrides
         targetRevision: "{{if .heoRevisionOverride}}{{.heoRevisionOverride}}{{else}}{{.heoRevision}}{{end}}"
