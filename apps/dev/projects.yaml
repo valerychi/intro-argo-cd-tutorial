@@ -8,8 +8,8 @@ spec:
   sourceRepos:
     - https://github.com/qlik-trial/gitops-environments
   destinations:
-    - namespace: argocd
-      server: eks-dev
+    - namespace: *
+      server: *
   sourceNamespaces:
     - argocd
 ---
