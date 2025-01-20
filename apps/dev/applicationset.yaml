@@ -130,7 +130,7 @@ spec:
           jqPathExpressions:
             - .spec.metrics[].object.target.value
       destination:
-        server: eks-dev
+        server: http://cluster-eks-dev:8001
         namespace: "{{.namespace}}"
       syncPolicy:
         syncOptions:
