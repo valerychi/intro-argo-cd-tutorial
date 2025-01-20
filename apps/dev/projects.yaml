@@ -1,0 +1,62 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: management
+  namespace: argocd
+spec:
+  description: For managment applications that control the cluster
+  sourceRepos:
+    - https://github.com/qlik-trial/gitops-environments
+  destinations:
+    - namespace: argocd
+      server: eks-dev
+  sourceNamespaces:
+    - argocd
+---
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: qcs
+  namespace: argocd
+spec:
+  description: For Qlik applications
+  clusterResourceWhitelist:
+    - group: '*'
+      kind: '*'
+  sourceRepos:
+    - https://github.com/qlik-trial/helm-environment-overrides
+  destinations:
+    - namespace: default
+      server: eks-dev
+    - namespace: automl
+      server: eks-dev
+    - namespace: automations
+      server: eks-dev
+    - namespace: qcs-keys
+      server: eks-dev
+    - namespace: solace-cloud
+      server: eks-dev
+    - namespace: talend
+      server: eks-dev
+    - namespace: dynatrace
+      server: eks-dev
+    - namespace: precog-oem
+      server: eks-dev
+    - namespace: reporting
+      server: eks-dev
+    - namespace: data-catalog
+      server: eks-dev
+    - namespace: stitch
+      server: eks-dev
+    - namespace: analytics-ai
+      server: eks-dev
+    - namespace: gloo-system
+      server: eks-dev
+    - namespace: ai-platform
+      server: eks-dev
+    - namespace: qcdi-managed-gateway
+      server: eks-dev
+    - namespace: new-ci-world
+      server: eks-dev
+  sourceNamespaces:
+    - argocd
