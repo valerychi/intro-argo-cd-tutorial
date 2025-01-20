@@ -27,7 +27,7 @@ spec:
     - https://github.com/qlik-trial/helm-environment-overrides
   destinations:
     - namespace: default
-      server: eks-dev
+      server: http://cluster-eks-dev:8001
     - namespace: automl
       server: eks-dev
     - namespace: automations
